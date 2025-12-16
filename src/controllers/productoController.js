@@ -18,7 +18,7 @@ export const update = (req, res) => {
   const { id } = req.params;
   const { stockAmount } = req.body;
 
-  const productoActual = repo.getById(id);
+  const productoActual = repo.findById(id);
   if (!productoActual) {
     return res.status(404).json({
       statusCode: 404,
@@ -30,7 +30,7 @@ export const update = (req, res) => {
     if (!Number.isInteger(stockAmount)) {
       return res.status(400).json({
         statusCode: 400,
-        error: 'El stock debe ser un número entero'
+        error: 'El stock debe ser un entero'
       });
     }
 
@@ -52,7 +52,6 @@ export const update = (req, res) => {
   }
 
   const p = repo.update(id, req.body);
-
   res.status(200).json(p);
 };
 

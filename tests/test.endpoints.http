@@ -1,0 +1,40 @@
+@id = f6e5d4c3-b2a1-4f89-8c7d-6e5f4a3b2c40
+
+### Crear producto
+POST http://localhost:3000/api/v1/productos
+Content-Type: application/json
+
+{
+"producto": "Mouse" ,
+"stockAmount": 10
+}
+
+
+### Listar productos
+GET http://localhost:3000/api/v1/productos
+
+
+### Update SIN auth (401)
+PUT http://localhost:3000/api/v1/productos/{{id}}
+Content-Type: application/json
+
+
+{ "stockAmount": 20 }
+
+
+### Update CON api-key
+PUT http://localhost:3000/api/v1/productos/{{id}}
+x-api-key: dev-api-key
+Content-Type: application/json
+
+
+{ "stockAmount": 11 }
+
+
+### Delete protegido
+DELETE http://localhost:3000/api/v1/productos/{{id}}
+x-api-key: dev-api-key
+
+
+### CSV Albums
+GET http://localhost:3000/api/v1/albums/csv

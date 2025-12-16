@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "2f7a4c9e-1d8b-4e3a-9a7c-6b5d4e3c2a10",
+    "producto": "Teclado Mecánico Redragon",
+    "stockAmount": 12,
+    "fechaIngreso": "2025-12-03"
+  },
+  {
+    "id": "7a8c9d1e-2b3f-4a5c-9d8e-1f2a3b4c5d20",
+    "producto": "Auriculares HyperX Cloud II",
+    "stockAmount": 8,
+    "fechaIngreso": "2025-12-05"
+  },
+  {
+    "id": "4c3b2a1f-9e8d-7c6b-5a4d-3e2f1a9c8b30",
+    "producto": "Monitor Samsung 24 pulgadas",
+    "stockAmount": 5,
+    "fechaIngreso": "2025-12-06"
+  },
+  {
+    "id": "a1b2c3d4-e5f6-4789-9abc-def012345678",
+    "producto": "Notebook Lenovo IdeaPad",
+    "stockAmount": 3,
+    "fechaIngreso": "2025-12-07"
+  },
+  {
+    "id": "f6e5d4c3-b2a1-4f89-8c7d-6e5f4a3b2c40",
+    "producto": "Webcam Logitech C920",
+    "stockAmount": 10,
+    "fechaIngreso": "2025-12-08"
+  },
+  {
+    "id": "1cd91320-b0c5-4b5a-938a-7a3f2e1e7b28",
+    "producto": "Mouse",
+    "stockAmount": 10,
+    "fechaIngreso": "2025-12-16"
+  }
+]

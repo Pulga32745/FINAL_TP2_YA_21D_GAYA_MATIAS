@@ -15,5 +15,5 @@ export default {
     d[i] = { ...d[i], ...data };
     write(d); return d[i];
   },
-  delete: id => write(read().filter(p => p.id !== id))
+  delete: id => write(read().filter(p => p.id !== id)),
 };
