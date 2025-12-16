@@ -4,7 +4,6 @@ import routes from './routes/productoRoutes.js';
 
 const app = express();
 
-
 app.use(morgan('dev'));
 
 app.use(express.json());

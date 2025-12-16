@@ -1,4 +1,4 @@
 export default {
   API_KEY: 'dev-api-key',
-  JWT_SECRET: 'secret123'
+  JWT_SECRET: 'secret123',
 };

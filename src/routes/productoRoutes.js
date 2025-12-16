@@ -11,7 +11,7 @@ r.get('/productos/:id', c.getById);
 r.put('/productos/:id', auth, c.update);
 r.delete('/productos/:id', auth, c.remove);
 
-r.get('/albums/csv', async (_,res)=>{
+r.get('/albums/csv', async (_, res) => {
   const csv = await generateCSV();
   res.type('text/csv').send(csv);
 });

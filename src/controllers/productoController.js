@@ -1,16 +1,19 @@
 import repo from '../repository/productoRepositoryJson.js';
 import service from '../services/productoService.js';
 
-export const createProducto = (req,res)=>{
-  try { res.status(201).json(service.create(req.body)); }
-  catch(e){ res.status(e.statusCode).json(e); }
+export const createProducto = (req, res) => {
+  try {
+    res.status(201).json(service.create(req.body));
+  } catch (e) {
+    res.status(e.statusCode).json(e);
+  }
 };
 
-export const getAll = (_,res)=>res.json(repo.findAll());
+export const getAll = (_, res) => res.json(repo.findAll());
 
-export const getById = (req,res)=>{
+export const getById = (req, res) => {
   const p = repo.findById(req.params.id);
-  if(!p) return res.status(404).json({statusCode:404,error:'Producto no encontrado'});
+  if (!p) return res.status(404).json({ statusCode: 404, error: 'Producto no encontrado' });
   res.json(p);
 };
 
@@ -22,7 +25,7 @@ export const update = (req, res) => {
   if (!productoActual) {
     return res.status(404).json({
       statusCode: 404,
-      error: 'Producto no encontrado'
+      error: 'Producto no encontrado',
     });
   }
 
@@ -30,7 +33,7 @@ export const update = (req, res) => {
     if (!Number.isInteger(stockAmount)) {
       return res.status(400).json({
         statusCode: 400,
-        error: 'El stock debe ser un entero'
+        error: 'El stock debe ser un entero',
       });
     }
 
@@ -39,14 +42,14 @@ export const update = (req, res) => {
     if (Math.abs(diferencia) !== 1) {
       return res.status(400).json({
         statusCode: 400,
-        error: 'El stock solo puede incrementarse o decrementarse de a 1'
+        error: 'El stock solo puede incrementarse o decrementarse de a 1',
       });
     }
 
     if (stockAmount < 1) {
       return res.status(400).json({
         statusCode: 400,
-        error: 'El stock no puede ser menor a 1'
+        error: 'El stock no puede ser menor a 1',
       });
     }
   }
@@ -55,8 +58,6 @@ export const update = (req, res) => {
   res.status(200).json(p);
 };
 
-
-
 export const remove = (req, res) => {
   const { id } = req.params;
 
@@ -64,13 +65,13 @@ export const remove = (req, res) => {
   if (!producto) {
     return res.status(404).json({
       statusCode: 404,
-      error: `No existe un producto con id ${id}`
+      error: `No existe un producto con id ${id}`,
     });
   }
 
   repo.delete(id);
 
   res.status(200).json({
-    message: `El producto con id ${id} fue eliminado correctamente`
+    message: `El producto con id ${id} fue eliminado correctamente`,
   });
 };

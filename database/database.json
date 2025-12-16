@@ -18,21 +18,9 @@
     "fechaIngreso": "2025-12-06"
   },
   {
-    "id": "a1b2c3d4-e5f6-4789-9abc-def012345678",
-    "producto": "Notebook Lenovo IdeaPad",
-    "stockAmount": 3,
-    "fechaIngreso": "2025-12-07"
-  },
-  {
     "id": "f6e5d4c3-b2a1-4f89-8c7d-6e5f4a3b2c40",
     "producto": "Webcam Logitech C920",
     "stockAmount": 10,
     "fechaIngreso": "2025-12-08"
-  },
-  {
-    "id": "1cd91320-b0c5-4b5a-938a-7a3f2e1e7b28",
-    "producto": "Mouse",
-    "stockAmount": 10,
-    "fechaIngreso": "2025-12-16"
   }
 ]
